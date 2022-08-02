@@ -1,0 +1,56 @@
+algo tab
+type tab:table de [50]of integer
+var 
+t,l:tab
+t={12,13,6,10}
+l={13,10,16,15}
+i,j,s1=0,s2=0: entier
+pour i de 1 a 4 faire
+pour j de 1 a 5 faie
+if (t[i]=l[j]) then
+s1=s1+t[i]
+else 
+s2=s2+t[i]
+fin pour 
+fin pour 
+pour j de 1 a5 faire
+pour i de 1 a 4 faire
+if l[j]=t[i]
+s1+=l[j]
+else 
+s2=l[j]
+--------------------------------------------
+algo tab 2
+type tab:table de [50]of integer
+var 
+t,l:tab
+t={12,13,6,10}
+l={13,10,16,15}
+i,j,s1=0,s2=0: entier
+htab:hash_Table<integer,integer>;
+pour i de 1 a 4 faire 
+ htab.insert(i,"t[i]");
+fin pour
+pour  j de 5 a 10faire 
+ htab.insert(j,l[i-4]);
+fin pour 
+pour i d e 1 a 4 faire 
+pour je de 5 a 10 faire
+if (hatb.get(i)==htab.get(j))
+s1+=htab.get(i)
+else 
+s2+=htab.get(j)
+
+pour je de 5 a 10 faire
+pour i d e 1 a 4 faire 
+
+if (hatb.get(j)==htab.get(i))
+s1+=htab.get(j)
+else 
+s2+=htab.get(j)
+
+
+
+
+
+
