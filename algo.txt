@@ -1,54 +1,62 @@
 algo tab
 type tab:table de [50]of integer
-var 
+var
+found:&boolean  
 t,l:tab
-t={12,13,6,10}
-l={13,10,16,15}
+tab 1 array of integer []
+tab 2 array of integer []
 i,j,s1=0,s2=0: entier
-pour i de 1 a 4 faire
-pour j de 1 a 5 faie
-if (t[i]=l[j]) then
-s1=s1+t[i]
-else 
+for (i=0;i<tab1.length;i++)
+
+found = false
+for (j=0;j<tab2.length;j++)
+if (tab1[i]=tab2[j]) then
+found=true
+s1=s1+tab1{i}}
+if (found=false)
+ 
 s2=s2+t[i]
-fin pour 
-fin pour 
-pour j de 1 a5 faire
-pour i de 1 a 4 faire
-if l[j]=t[i]
-s1+=l[j]
-else 
-s2=l[j]
+fin pour
+--
+for (j=0;j<tab1.length;j++)
+
+found = false
+for (j=0;j<tab2.length;j++)
+if (tab2[j]=tab1[i]) then
+found=true
+s1=s1+tab2[j]}
+if (found=false)
+ 
+s2=s2+tab2[j]
+fin pour  
+
+
 --------------------------------------------
 algo tab 2
 type tab:table de [50]of integer
 var 
-t,l:tab
+tab1,tab2,tab3:tab
 t={12,13,6,10}
 l={13,10,16,15}
 i,j,s1=0,s2=0: entier
+
+
+
 htab:hash_Table<integer,integer>;
-pour i de 1 a 4 faire 
- htab.insert(i,"t[i]");
-fin pour
-pour  j de 5 a 10faire 
- htab.insert(j,l[i-4]);
-fin pour 
-pour i d e 1 a 4 faire 
-pour je de 5 a 10 faire
-if (hatb.get(i)==htab.get(j))
-s1+=htab.get(i)
+for (i=0;i<tab1.length;i++)
+{if (htab.lookup(tab1[i])
+htab.insert(tab1[i],count+1)
+else
+htab.insert(tab[i],1)
+}
+//meme pour tab 2
+tab3=htab.get(keys)
+for(i=0;i<tab3.lngth;i++)
+{
+if(htab.lokup(tab[i]==1)
+s1=s1+tab3[i]
 else 
-s2+=htab.get(j)
-
-pour je de 5 a 10 faire
-pour i d e 1 a 4 faire 
-
-if (hatb.get(j)==htab.get(i))
-s1+=htab.get(j)
-else 
-s2+=htab.get(j)
-
+s2=s2+tab3[i]
 
 
 
